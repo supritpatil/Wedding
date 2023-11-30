@@ -1,0 +1,461 @@
+body {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+#ifMobile1 {
+  background-image: url(wed\ 6.png)
+}
+
+@media all and (max-width: 499px) {
+  #ifMobile1 {
+      background-image: url(wed\ 6.png)
+  }
+}
+
+header {
+    position: relative;
+    background-image: -moz-linear-gradient();
+    background-color: #333;
+    color: #fff;
+    padding: 10px 5px 0px 40px;
+    text-align: center;
+    margin-right: auto;
+}
+
+footer {
+  height: 2%;
+  background-color: #333;
+  text-size-adjust: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  padding-top: 4px;
+  padding-bottom: 2%;
+  background-origin: padding-box;
+  margin-top: auto;
+  position: flex: 2 2 auto;;
+  bottom: 100%;
+  width: 100%;
+}
+style {
+  /* display:inline-block;
+  width:768px;
+  margin:0 auto;
+  height: auto; */
+    
+  
+} 
+/* @media only screen and (max-width: 767px) {
+  style {
+      width:100%;
+  }
+}
+.logo {
+    margin: 0;
+} */
+
+.nav {
+  padding: 10px;
+  border: none;
+  background: none;
+  border: 1px solid #000;
+  /* position: relative; */
+  width: auto;
+  height: auto;
+  display: flex;
+}
+@media only screen and (max-width: 600px) {
+  .body {
+      padding-inline-start: 5%; /* Adjust the padding for smaller screens */
+      padding-top: 5%; /* Adjust the padding for smaller screens */
+  }
+}
+@media only screen and (max-width: 900px) {
+  .body style {
+      position: relative;
+      display: flex;
+
+    }
+}
+nav ul {
+    margin: 0;
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+.animated-text {
+    font-size: 24px;
+    text-shadow: #1f4c65;
+}
+
+/*The eye icon on the password can be stylize with any tool you want
+to use (the only way i know to do this correctly is using JS)
+this is meant to be wide supported and it really depends on you browsers
+if i realize any way to stylize the eye it could be added in the future
+in other input type*/
+
+.container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  display: flexbox;
+  max-height: 730px;
+  width: 1000px;
+  margin: normal;
+  aspect-ratio: 16/9;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 5em;
+}
+ 
+.input-content::after {
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  box-shadow: inset 0px 0px 20px 20px #212121;
+  background: repeating-linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(64, 144, 181, 0.6) 1px,
+      rgb(0, 0, 0) 3px,
+      hsl(295, 60%, 12%) 5px,
+      #153544 4px,
+      transparent 0.5%
+    ),
+    repeating-linear-gradient(
+      to left,
+      hsl(295, 60%, 12%) 100%,
+      hsla(295, 60%, 12%, 0.99) 100%
+    );
+  -webkit-clip-path: polygon(
+    26% 0,
+    31% 5%,
+    61% 5%,
+    66% 0,
+    92% 0,
+    100% 8%,
+    100% 89%,
+    91% 100%,
+    7% 100%,
+    0 92%,
+    0 0
+  );
+  clip-path: polygon(
+    26% 0,
+    31% 5%,
+    61% 5%,
+    66% 0,
+    92% 0,
+    100% 8%,
+    100% 89%,
+    91% 100%,
+    7% 100%,
+    0 92%,
+    0 0
+  );
+  animation: backglitch 50ms linear infinite;
+}
+
+.input-dist {
+  z-index: 1000;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-inline: 4em;
+  padding-block: 4em;
+  grid-template-columns: 1fr;
+}
+
+.input-type {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 1.1rem;
+  background-color: transparent;
+  width: 100%;
+  border: none;
+}
+
+.input-is {
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  transition: all 1s ease-in-out;
+  border-bottom: 1px solid hsl(221, 26%, 43%);
+}
+
+.input-is:hover {
+  transition: all 1s ease-in-out;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(102, 224, 255, 0.2) 27%,
+    rgba(102, 224, 255, 0.2) 63%,
+    transparent 100%
+  );
+}
+
+.input-content:focus-within::before {
+  transition: all 1s ease-in-out;
+  background: hsla(0, 0%, 100%, 0.814);
+}
+
+.input-is:focus {
+  outline: none;
+  border-bottom: 1px solid hsl(192, 100%, 100%);
+  color: hsl(192, 100%, 88%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(102, 224, 255, 0.2) 27%,
+    rgba(102, 224, 255, 0.2) 63%,
+    transparent 100%
+  );
+}
+
+.input-is::-moz-placeholder {
+  color: hsla(192, 100%, 88%, 0.806);
+}
+
+.input-is::placeholder {
+  color: hsla(192, 100%, 88%, 0.806);
+}
+
+.submit-button {
+  width: 50%;
+  border: none;
+  color: hsla(192, 100%, 88%, 0.806);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(102, 224, 255, 0.2) 27%,
+    rgba(102, 224, 255, 0.2) 63%,
+    transparent 100%
+  );
+  clip-path: polygon(0 0, 85% 0%, 100% 0, 100% 15%, 100% 90%, 91% 100%, 0 100%);
+  padding: 0.5em;
+  animation: blinkShadowsFilter 0.5s ease-in infinite;
+  transition: all 500ms;
+}
+
+.submit-button:hover {
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bold;
+}
+
+@keyframes backglitch {
+  0% {
+    box-shadow: inset 0px 20px 20px 30px #212121;
+  }
+
+  50% {
+    box-shadow: inset 0px -20px 20px 30px hsl(297, 42%, 10%);
+  }
+
+  to {
+    box-shadow: inset 0px 20px 20px 30px #212121;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate(-50%, 20%);
+  }
+
+  50% {
+    transform: rotate(180deg) translate(40%, 10%);
+  }
+
+  to {
+    transform: rotate(360deg) translate(-50%, 20%);
+  }
+}
+
+
+
+
+.btn {
+    /* height: auto;
+    width: auto;
+    align-content: center; */
+    /* padding: 0%; */
+    /* position: relative;
+    vertical-align: auto;
+    display: flex ; */
+    padding: auto;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(14, 14, 26);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  }
+  
+  .btn:active {
+    scale: 0.92;
+  }
+  
+  .btn:hover {
+    background: rgb(2,29,78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+    color: rgb(4, 4, 38);
+  }
+
+
+
+  .loader {
+    display: flex;
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    height: 55px;
+    width: 200px;
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    position: relative;
+    align-items: center;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    transform-origin: center;
+    animation-delay: 2s;
+  }
+  .loader .container:nth-child(1) {
+    justify-content: flex-end;
+    justify-items: flex-end;
+    animation: scroll-down 3s infinite ease-in-out;
+    animation-delay: 3s;
+  }
+  
+  .love {
+    background: red;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    left: 8px;
+    margin: 0.8rem 4px;
+    transform: rotate(45deg);
+    animation-delay: 2s;
+  }
+  
+  .love::before, .love::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: red;
+  }
+  
+  .love::before {
+    left: -16px;
+  }
+  
+  .love::after {
+    top: -16px;
+  }
+  
+  .loader:hover {
+    animation: none;
+  }  
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  
+    30% {
+      transform: translateY(-150%);
+      filter: blur(10px);
+    }
+  
+    60% {
+      transform: translateY(0);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  
+    30% {
+      transform: translateY(150%);
+      filter: blur(10px);
+    }
+  
+    60% {
+      transform: translateY(0);
+      filter: blur(0px);
+    }
+  }
+ .img {
+  position: relative;
+  padding: 6%;
+  display: flex;
+  margin: auto;
+  height: auto;
+  width: auto;
+ }  
+
+
